@@ -1,0 +1,49 @@
+LimStudents = {
+    "Lord": 75,
+    "Ethan": 99,
+    "Alex": 80,
+    "Sean": 86,
+}
+print("STUDENT GRADES")
+print("----------------")
+print("Ras:  ", LimStudents["Lord"])
+print("Ethan:  ", LimStudents["Ethan"])
+
+LimStudents["Meljay"] = 80
+LimStudents["Sean"] = 86
+LimStudents["Alex"] = 80
+
+LimName1 = input("Enter Student Name:  ")
+LimGrade1 = input("Enter Student Grade:  ")
+
+LimStudents[LimName1] = LimGrade1
+print(LimStudents)
+print("Update Student Grades")
+print("\n--------------")
+
+for LimName, LimGrade in LimStudents.items():
+    print(LimName, ":", LimGrade)
+
+print("Grade Statistics")
+
+LimGrades = list(LimStudents.values())
+LimLowest = min(LimGrade)
+LimHighest = max(LimGrades)
+LimDifference = LimHighest - LimLowest
+LimAverage = sum(LimGrades) / len(LimGrades)
+LimSort = sorted(LimGrades)
+
+
+print("Grade Statistics")
+print("Lowest= ", LimLowest)
+print("Maximum:", LimGrade)
+print("Difference: ",LimDifference)
+print("Average: ", LimAverage)
+print("Sorted:", LimSort)
+
+
+search = input("\nEnter Student Name To Search")
+if search in LimStudents:
+    print(search, "Has a grade of:  ", LimStudents[search])
+else:
+    print("Students Not Found")
