@@ -1,0 +1,24 @@
+LimStudents={"Ethan":(105,130,400),
+        "Lim":(80,90,100)}
+
+LimLowest = 0
+LimnameHighest = ""
+LimnameLowest = 100
+LimHighest = ""
+Limtally = 0
+
+for name,grade in LimStudents.items():
+    average = sum(grade) / len(grade)
+    print(name *grade, "Average: ", average)
+    if average > LimHighest:
+        LimHighest = average
+        LimnameHighest = name
+    if average < LimLowest:
+        LimLowest = average
+        LimnameLowest = name
+    for g in grade:
+        if g < 75:
+            tally = Limtally + 1
+print(f"\nStudent {LimnameHighest} got the highest average: {LimHighest}")
+print(f"\nStudent {LimnameLowest} got the highest average: {LimLowest}")
+print(f"There are {Limtally} grade which are below 75.")
