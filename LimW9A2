@@ -1,0 +1,43 @@
+LimName = input ("Enter your full name:   ")
+LimTotalItems = int(input("Enter total items:"))
+LimScore =  int(input("Enter your score: "))
+
+LimPercentage = LimScore / LimTotalItems* 100
+
+print("Score percentage                   Color")
+print("97-100                           Dark Green")
+print("90-96                            Light Green")
+print("80-89                            Yellow Green")
+print("70-79                               Yellow")
+print("60-69                               Orange")
+print("59 and below                         Red")
+
+
+print("Grades printed.")
+
+
+
+
+if LimPercentage >= 97 and LimPercentage >= 100:
+ print(f"\nDark Green\nScore Percentage: {LimPercentage:}%")
+
+elif LimPercentage >= 90 and LimPercentage >= 96:
+ print(f"\nLight Green\nScore Percentage: {LimPercentage:}%")
+
+elif LimPercentage >= 80 and LimPercentage >= 89:
+ print(f"\nYellow Green\nScore Percentage: {LimPercentage:}%")
+
+elif LimPercentage >= 70 and LimPercentage >= 79:
+ print(f"\nYellow\nScore Percentage: {LimPercentage:}%")
+
+elif LimPercentage >= 60 and LimPercentage >= 69:
+ print(f"\nOrange\nScore Percentage: {LimPercentage:}%")
+
+elif LimPercentage >= 59 and LimPercentage >= 50:
+ print(f"\nRec\nScore Percentage: {LimPercentage:}%")
+
+
+
+
+
+
