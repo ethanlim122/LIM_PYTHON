@@ -1,0 +1,28 @@
+Limname = input("Enter your full name: ").title()
+
+print(f"Welcome, {Limname}!")
+print("\nCHOOSE YOUR CALCULATION")
+print("1. Power")
+print("2. Voltage")
+print("3. Current")
+
+Limchoice = input("Select: ")
+
+
+if Limchoice == "1":
+    LimV = float(input("Voltage: "))
+    LimI = float(input("Current:"))
+    print(f"Power = {LimV * LimI} W")
+
+elif Limchoice == "2":
+    LimP = float(input("Power: "))
+    LimI = float(input("Current: "))
+    print(f"Voltage = {LimP / LimI} V")
+
+elif Limchoice == "3":
+    LimP = float(input("Power: "))
+    LimV = float(input("Voltage: "))
+    print(f"Current = {LimP / LimV} A")
+
+else:
+    print(f"Sorry {Limname}, invalid choice.")
